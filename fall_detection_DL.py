@@ -255,7 +255,7 @@ for video in tqdm(videos):
         # cv2.imshow('frame',frame)
         # cv2.waitKey(300)
         
-        '''# The frames are read until '''
+        '''# The n frames are read until the frame step is applied'''
         for step in range(0,frame_step):
             ret, frame = cap.read()
     
