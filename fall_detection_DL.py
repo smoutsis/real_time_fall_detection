@@ -20,7 +20,6 @@ import matplotlib.pyplot as plt
 """
 # Class for the architect of the MLPs, fc1 input is changed according to the input (3 or 4).
 """
-
 class fc(nn.Sequential):
     def __init__(self, ):
         super(fc, self).__init__()
