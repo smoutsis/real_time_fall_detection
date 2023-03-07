@@ -10,3 +10,5 @@ Used datasets:
 COCO: https://cocodataset.org/#download
 E-FDPS: https://gram.web.uah.es/data/datasets/fpds/index.html
 LE2I (imvia): https://imvia.u-bourgogne.fr/en/database/fall-detection-dataset-2.html
+
+YOLOv8 is applied (https://github.com/ultralytics/ultralytics) and the installation instructions should first be followed
