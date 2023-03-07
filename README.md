@@ -3,7 +3,7 @@
 !!! under construction !!!
 
 Papers based on:
-Fallen People Detection Capabilities Using Assistive Robot ( https://www.mdpi.com/2079-9292/8/9/915 )
+Fallen People Detection Capabilities Using Assistive Robot ( https://www.mdpi.com/2079-9292/8/9/915 ), 
 RGB camera-based fallen person detection system embedded on a mobile platform ( https://www.sciencedirect.com/science/article/pii/S0957417422001890 )
 
 Used datasets:
