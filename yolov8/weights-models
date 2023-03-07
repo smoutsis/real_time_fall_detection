@@ -1,2 +1,7 @@
 Models can be downloaded from this link:
 https://drive.google.com/drive/folders/1lCzsKk9iWcNfZjsX45sqrThByvexLJ_g?usp=share_link
+
+train13_n_no_rotated -> YOLOv8n trained to initial images
+train14_s_no_rotated -> YOLOv8s trained to initial images
+train5_s_rotated -> YOLOv8s trained to initial and rotated images
+train6_n_rotated -> YOLOv8n trained to initial and rotated images
