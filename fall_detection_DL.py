@@ -264,7 +264,7 @@ for video in tqdm(videos):
         pred_fall.append(0)
     else:
         pred_fall.append(1)
-        # fall_flag = True
+
     '''# If more than one fall have been detected are measured '''
     total_of_falls.append(count_of_falls)
                                 
