@@ -11,8 +11,6 @@ import torch.nn as nn
 import math
 from tqdm import tqdm 
 import pandas as pd
-from sklearn import metrics
-import time
 from collections import deque
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,6 +18,7 @@ import matplotlib.pyplot as plt
 """
 # Class for the architect of the MLPs, fc1 input is changed according to the input (3 or 4).
 """
+
 class fc(nn.Sequential):
     def __init__(self, ):
         super(fc, self).__init__()
@@ -87,14 +86,19 @@ model_fall = torch.load('path to the MLP model')
 model_fall.to(device)
 model_fall.eval()
 
-'''# Give the math to the YOLO (.pt) model'''
+'''# Give the path to the YOLO (.pt) model'''
 model = YOLO('path to the yolo model')
 
 model.classes = [0]
 model.to(device)
 
-video_path = 'path to the folder where all the videos of target dataset are.'
-df = pd.read_csv('path to the csv file that contains the labels and the names of the corresponding videos (labels.csv)')
+
+# video_path = 'path to the folder where all the videos of target dataset are.'
+# df = pd.read_csv('path to the csv file that contains the labels and the names of the corresponding videos (labels.csv)')
+
+video_path = '/home/stavros/Desktop/IROS/imvia/all_videos_3'
+df = pd.read_csv('/home/stavros/Desktop/IROS/imvia/labels3.csv')
+
 
 videos = df.name[:].to_list()
 true_fall = df.label[:].to_list()      
@@ -264,7 +268,7 @@ for video in tqdm(videos):
         pred_fall.append(0)
     else:
         pred_fall.append(1)
-
+        
     '''# If more than one fall have been detected are measured '''
     total_of_falls.append(count_of_falls)
                                 
@@ -273,7 +277,7 @@ cv2.destroyAllWindows()
 
 df = pd.DataFrame(list(zip(videos, true_fall, pred_fall, total_of_falls)),columns =['name', 'true_fall', 'pred_fall', 'total_of_falls'])
 
-'''# The TP, TN, FP and FN for each class are calculated, as 1 we considet the no-fall class'''
+'''# The TP, TN, FP and FN for each class are calculated, as 1 we consider the no-fall class'''
 TP_0 = 0
 TN_0 = 0
 FP_0 = 0
@@ -317,4 +321,3 @@ print('acc: %f , pre0: %f , rec0: %f , f_10: %f , pre1: %f , rec1: %f , f_11: %f
 
 res_list2 = [acc, pre0, rec0, f_10, pre1, rec1, f_11]
 af3 = pd.DataFrame([res_list2],columns=['acc','pre0','rec0', 'f_10','pre1','rec1', 'f_11'])
-
