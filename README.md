@@ -1,6 +1,6 @@
 # real_time_fall_detection
 
-!!! under construction !!!
+!!! More details will be added after the publication !!!
 
 Papers based on:
 Fallen People Detection Capabilities Using Assistive Robot ( https://www.mdpi.com/2079-9292/8/9/915 ), 
