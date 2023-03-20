@@ -4,7 +4,7 @@ opencv-python==4.7.0.68
 pandas==1.5.3
 scikit-learn==1.2.1
 tqdm==4.64.1
-wandb==0.13.9
+tqdm=4.64.1
 ultralytics==8.0.21
 torch==1.13.1
 torchvision==0.14.1
