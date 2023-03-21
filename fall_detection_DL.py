@@ -92,13 +92,8 @@ model = YOLO('path to the yolo model')
 model.classes = [0]
 model.to(device)
 
-
-# video_path = 'path to the folder where all the videos of target dataset are.'
-# df = pd.read_csv('path to the csv file that contains the labels and the names of the corresponding videos (labels.csv)')
-
-video_path = '/home/stavros/Desktop/IROS/imvia/all_videos_3'
-df = pd.read_csv('/home/stavros/Desktop/IROS/imvia/labels3.csv')
-
+video_path = 'path to the folder where all the videos of target dataset are.'
+df = pd.read_csv('path to the csv file that contains the labels and the names of the corresponding videos (labels.csv)')
 
 videos = df.name[:].to_list()
 true_fall = df.label[:].to_list()      
