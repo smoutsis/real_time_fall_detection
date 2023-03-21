@@ -12,3 +12,5 @@ E-FDPS: https://gram.web.uah.es/data/datasets/fpds/index.html
 LE2I (imvia): https://imvia.u-bourgogne.fr/en/database/fall-detection-dataset-2.html
 
 YOLOv8 is applied (https://github.com/ultralytics/ultralytics) and the installation instructions should first be followed before the installation of requirements.txt .
+
+For the target dataset <LE2I (imvia): https://imvia.u-bourgogne.fr/en/database/fall-detection-dataset-2.html> run the unzip.py script in the folder targer_dataset. In fall_detection_DL.py at 95 serie give the path of the dataset folder that is created and in 96 the path of labels.csv .
