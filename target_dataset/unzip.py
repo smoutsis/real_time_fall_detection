@@ -24,20 +24,20 @@ for folder in folders:
 
 os.rename(os.path.join(path,'Lecture room'), os.path.join(path,'Lecture_room'))
    
-os.system('mkdir ' + path + '/dataset')   
+os.mkdir(os.path.join(path, 'dataset')) 
      
 for folder in folders:
     
     files = os.listdir(os.path.join(path, folder))
     
     if len(files) == 2:
-        files2 = os.listdir(os.path.join(path, folder, files[0]))
+        pass
+        files2 = os.listdir(os.path.join(path, folder, files[1]))
         for f in files2:
-            src = os.path.join(path, folder, files[0], f) 
+            src = os.path.join(path, folder, files[1], f) 
             dst = os.path.join(path, 'dataset', folder+'_'+f) 
             
             shutil.move(src, dst)
-        
     else:
         for f in files:
             src = os.path.join(path, folder, f) 
