@@ -31,10 +31,9 @@ for folder in folders:
     files = os.listdir(os.path.join(path, folder))
     
     if len(files) == 2:
-        pass
-        files2 = os.listdir(os.path.join(path, folder, files[1]))
+        files2 = os.listdir(os.path.join(path, folder, 'Videos'))
         for f in files2:
-            src = os.path.join(path, folder, files[1], f) 
+            src = os.path.join(path, folder, 'Videos', f) 
             dst = os.path.join(path, 'dataset', folder+'_'+f) 
             
             shutil.move(src, dst)
@@ -44,7 +43,5 @@ for folder in folders:
             dst = os.path.join(path, 'dataset', folder+'_'+f) 
             
             shutil.move(src, dst)
-    
-    
     
 
